@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        //Este formato crea un nuevo registro
+        <RollingFile name="rolling" fileName="D:\Tecnicatura en programacion\2do semestre\Laboratorio 2\Log4j\MiLog3\Registros txt loggin\registro.log" filePattern="D:\Tecnicatura en programacion\2do semestre\Laboratorio 2\Log4j\MiLog3\Registros txt loggin\registro-%d{yyyy-MM-dd_HH-mm-ss}.log">
+
+            //Este formato me sobreescribe el archivo ya existente
+            //filePattern="registro/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="rolling" />
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,7 @@
+2024-04-23 21:12:29,487 [main] INFO : Patron 1 <PatternLayout pattern="%d [%t] %-5level: %msg%n"/>
+
+2024-04-23 21:13:05.417 [main] INFO  org.example.Main - Patron 2 <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+
+21:15:49.053 INFO  [main] o.e.Main - Patron 3 <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level [%t] %logger{1.} - %msg%n"/>
+
+2024-04-23 21:17:19,983 [main] Patron 4 <PatternLayout pattern="%d [%t] %msg%n"/>
